@@ -1,0 +1,22 @@
+Telco Customer Churn Prediction
+Explanation Document
+1.Introduction
+Customer churn is a major challenges for subscription-based businesses such as telecom companies. Understanting why customers leave and prediction churn early can help businesses take corrective action. In this project, we build an interpretable machine learning model using XGBoost and SHAP to predict churn and explain the key drivers behind it.
+This document explains the full workflow, methodology, models, evaluation, and insights generated from the Telco customer churn dataset.
+Dataset overview
+Project Explanation
+This 
+Telco_customer_churn.csv – Data source for analysis and modeling
+Notebook.ipynp  -notebook for data modeling and reporting
+README.md – project overview and instruction
+Requirements.txt – List of required Python packages
+ src/ - Source code(data cleaning,modeling functions)
+models/ -saved trained model weights
+reports/ - Visuallizations and results
+AUC score and XGBClassifier :
+* In this project Auc score was 0.1 so this model predict all the samples correctly.
+Precision-Recall AUC score =1.0 (the best possible score)
+*This model  is perfect at identifying the positive class, identify all churn customers correctly, it does not wrongly classify any non-churn customers as churn. The model performance is ideal.
+*model perfect fit
+*PR-AUC of 1.0 indicating a perfect model with 100%precision and 100%recall.
+

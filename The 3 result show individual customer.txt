@@ -1,0 +1,66 @@
+The 3 result show individual customer-level predictions from your Telco Customer Churn XGBoost model.
+
+
+1. Raw features of a specific customer
+2. Predicted Churn Label (0 or 1)
+3. Predicted Customer Lifetime Value (CLTV)
+4. A SHAP waterfall plot showing why the model predicted that result
+These outputs are correct and show your model is working.
+
+Customer Raw Features
+You see values like:
+
+Payment Method
+Monthly Charges
+Total Charges
+Paperless Billing
+Tech Support
+Streaming TV, Movies
+Contract
+etc.
+These are encoded numeric values representing customer details.
+Churn Label = 0
+This means: The model predicts the customer will NOT churn
+CLTV = 4812
+CLTV = Customer Lifetime Value
+Your model estimates this customer will bring Rupees  4,812 more revenue in the future (or whatever unit you're using).
+Waterfall SHAP Plot
+The blue and red bars represent:
+Blue = factors that reduce churn probability
+Red = factors that increase churn probability
+Since the final result is 0 (no churn)- the blue side is stronger.
+Customer #2 Raw Features
+You see another customer’s encoded details.
+Churn Label = 0
+Again: This customer is also predicted NOT to churn
+CLTV = 5157
+This customer is estimated to generate higher future revenue compared to Customer #1.
+SHAP Explanation
+The model shows:
+High monthly charges
+Long contract
+Online services
+Paperless billing
+These affect churn probability.
+Blue bars dominate -so churn likelihood remains low.
+Customer #3 Raw Features
+Another customer's values displayed.
+Churn Label = 0
+Again: Model predicts NO churn
+CLTV = 2894
+
+This customer has a lower lifetime value compared to the other two.
+SHAP Explanation
+Blue values show:
+Contract type
+Tech support
+Monthly charges
+are reducing churn risk.
+Hence the model outputs a low churn probability.
+ Final Meaning of All 3 Results
+Customer	Churn Label	CLTV	Meaning
+#1	0	4812	Will stay, moderate value
+#2	0	5157	Will stay, high value
+#3	0	2894	Will stay, but low value
+All 3 customers are predicted to NOT churn
+

@@ -1,0 +1,49 @@
+Global SHAP summary plot – Description and Interpretation
+Which features are most important – ordered from top to bottom
+How each feature impacts the prediction
+Color:red=high value, blue=low value
+Whether the effect increase or decreases churn
+Position left or right on x-axis
+GLOBAL SHAP summary plot interpretation
+Top important features(Ranked by influence):
+1.churn label
+2.contract
+3.Dependents
+4.Monthly Charges
+5.Online Security
+6.Tenure Months
+7.Tech Support
+8.Internet Service
+Detailed interpretation Feature-by- Feature
+1.Churn Label(most important)
+->Model is learning the actual target
+->Model becomes “perfect”(0.1)
+2.Contract:
+Red points(month –to – month)-increase churn probability
+Blue points(eg: one year or two year contract)lower churn
+3.Dependents
+Blue(no dependents)- tends to increase churn
+Red(have dependents)-less likely to churn
+4.monthly charges
+*High monthly charges(red)-higher churn risk
+*Low monthly charges(blue)-lower churn
+5.Online Security
+If Online Security =no(blue)-higher churn
+If Online Security=yes(red)-lower churn
+6.Tenure Months
+*Low tenure(blue)-increase churn
+*High Tenure(red)-decrease churn
+7.Tech Support
+*No tech support(blue)-higher churn
+*Tech support available(red)-lower churn
+Top3 churn drivers here:
+1.Monthly charges
+*customers paying higher monthly bills are more likely to churn
+*High red/position SHAP values -higher charge-churn increases
+2.online security
+*customers without online security are more likely to churn
+*Blue points push predictions toward churn-”No Online security”=high risk
+3.Dependents
+*customers with no dependents tend to churnmore
+*having dependents reduces churn probability
+
